@@ -30,10 +30,16 @@ Additionally, the project utilizes evaluation files (contractnli.json, cuad.json
 
 Data Loading: Documents are ingested using LangChain's DirectoryLoader and TextLoader, with custom sequential handling for various file encodings (e.g., UTF-8, Latin-1) to ensure robust ingestion while tracking metadata like file names and directory paths.   
 Data Preprocessing: Raw text undergoes rigorous cleaning to remove noise and prepare for analysis. This includes stripping email addresses, telephone numbers, and special characters, converting text to lowercase, and removing standard English stop words using NLTK. Missing or corrupted files are skipped and logged.
-Exploratory Data Analysis (EDA): The cleaned data is analyzed to uncover relationships and trends. Key analyses include:   
+
+Exploratory Data Analysis (EDA): The cleaned data is analyzed to uncover relationships and trends. 
+
+Key analyses include:   
+
 Calculating document length statistics (average, maximum, and minimum word counts).   
 Analyzing word frequency using Python's Counter to identify the top 20 most and least common terms.   
+
 Generating TF-IDF vectors using scikit-learn and computing a cosine similarity matrix to analyze document similarity and detect duplicate or highly similar contract clauses. 
+
 
 **Technologies & Libraries**
 
